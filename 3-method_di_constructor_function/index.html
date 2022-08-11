@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method di Constructor Function</title>
+</head>
+<body>
+    <script>
+        function Person(){
+            this.firstName = "";
+            this.lastName = "";
+            this.sayHello = function(name){ // contoh method di constructor function
+                console.info(`Hello ${name}, My First Name is ${this.firstName}`);
+            }
+        }
+
+        const anwar = new Person();
+        anwar.firstName = "Munawar";
+        anwar.lastName = "Ahmad";
+        anwar.sayHello("Joko");
+
+        const shinta = new Person();
+        shinta.firstName = "Shinta";
+        shinta.lastName = "Purnama";
+        shinta.sayHello("Joko");
+    </script>
+</body>
+</html>

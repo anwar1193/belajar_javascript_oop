@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch Finally</title>
+</head>
+<body>
+    <script>
+        class MathUtil{
+            static sum(...numbers){
+                if(numbers.length === 0){ // Jika tidak ada parameter
+                    throw new Error("Total parameter harus lebih dari 0");
+                }
+
+                let total = 0;
+                for (const number of numbers) {
+                    total += number;
+                }
+                return total;
+            }
+        }
+
+        try{
+            console.info(MathUtil.sum()); // Ini akan error karena tidak ada parameter yang diisi
+            console.info("Kode Block Try Akan Berhenti, tulisan ini tidak akan tampil");
+        }catch(error){ // catch tampil apabila try nya error
+            console.error(`Terjadi Error : ${error.message}`);
+        }finally{ // akan tetap berjalan meski ada error / tidak
+            console.info("Kode Program Selesai");
+        }
+
+        console.info("Kode Program Tidak Akan Berhenti");
+
+        
+
+    </script>
+</body>
+</html>

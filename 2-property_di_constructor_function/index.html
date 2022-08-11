@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property di Constructor Function</title>
+</head>
+<body>
+    <script>
+        function Person(){
+            this.firstName = ""; // contoh property di constructor function
+            this.lastName = ""; // contoh property di constructor function
+        }
+
+        const anwar = new Person();
+        anwar.firstName = "Munawar";
+        anwar.lastName = "Ahmad";
+
+        const shinta = new Person();
+        shinta.firstName = "Shinta";
+        shinta.lastName = "Purnama";
+
+
+        console.info(anwar);
+        console.info(shinta);
+    </script>
+</body>
+</html>
